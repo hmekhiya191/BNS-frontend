@@ -1,0 +1,120 @@
+.testimonial-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 70vh;
+    background: #ffffff;
+    position: sticky;
+    font-family: 'Hatton-Ultralight', serif;
+}
+
+.quote {
+    font-size: 2.5rem;
+}
+
+.author {
+    font-size: 1.2rem;
+    margin-top: 3%;
+    letter-spacing: 0.5px;
+    font-stretch: extra-expanded;
+}
+
+/* Testimonial Content */
+.testimonial {
+    max-width: 70%;
+    position: absolute;
+    min-height: 20%;
+}
+
+/* Fade In & Fade Out Animations */
+.fade-in {
+    animation: fadeSlideScaleUp 0.5s ease forwards;
+}
+
+.fade-out {
+    animation: fadeSlideDown 0.3s ease forwards;
+}
+
+/* Enter Animation */
+@keyframes fadeSlideScaleUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px) scale(0.9);
+    }
+    50% {
+        opacity: 0.5;
+        transform: translateY(10px) scale(1.02);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* Exit Animation */
+@keyframes fadeSlideDown {
+    0% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-20px) scale(0.95);
+    }
+}
+
+/* Navigation Buttons */
+.prev-btn, .next-btn {
+    position: absolute;
+    bottom: 10%;
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: #222;
+    transition: transform 0.2s ease-in-out;
+}
+
+.prev-btn:hover, .next-btn:hover {
+    transform: scale(1.1);
+}
+
+.prev-btn { left: 5%; }
+.next-btn { right: 5%; }
+
+
+@media (max-width: 768px) {
+    .quote {
+        font-size: 2.1rem;
+        margin-top: 6%;
+    }
+    
+    .author {
+        font-size: 0.9rem;
+        margin-bottom: 8%;
+        letter-spacing: 0.5px;
+        font-stretch: extra-expanded;
+    }
+
+    .prev-btn, .next-btn {
+        font-size: 1rem;
+    }
+}
+@media (max-width: 480px) {
+    .quote {
+        font-size: 1.8rem;
+        margin-bottom: 7%;
+    }
+    
+    .author {
+        font-size: 0.8rem;
+        margin-top: 8%;
+        letter-spacing: 0.5px;
+        font-stretch: extra-expanded;
+    }
+
+    .prev-btn, .next-btn {
+        font-size: 0.9rem;
+    }
+}

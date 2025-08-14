@@ -1,0 +1,183 @@
+/* Main Section */
+.meet-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Left: Image, Right: Text */
+    height: 100vh;
+    background: #D9D0C4; /* Soft beige background */
+    font-family: 'Hatton-Ultralight', serif;
+}
+
+/* Initially Hidden */
+.text-container2 {
+    opacity: 0;
+    transform: translateY(50px);
+}
+
+.image-container2 {
+    opacity: 0;
+    transform: translateX(20px);
+}
+
+/* Triggered Animation when section comes into view */
+.meet-section.animate .text-container2 {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 1s ease-out, transform 2s ease-out;
+}
+
+/* Image Fade-In + Slide Effect */
+.meet-section.animate .image-container2 {
+    opacity: 1;
+    transform: translateX(0);
+    transition: opacity 1.5s ease-out, transform 1.5s ease-out;
+}
+
+/* image adjust */
+.image-container2 #meet{
+    display: none;
+}
+
+
+/* Left Side - Image */
+.image-container2 {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.image-container2 img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+
+/* Right Side - Text Content */
+.text-container2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 5%;
+    color: #000;
+}
+
+/* Text Delay */
+.meet-section.animate .text-container2 h1 {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeSlideUp 1s ease-out forwards 0.7s;
+}
+
+.meet-section.animate .text-container2 p {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeSlideUp 1s ease-out forwards 0.9s;
+}
+
+/* Animations */
+@keyframes fadeSlideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeSlideLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* 🔹 Media Queries */
+
+/* Tablets (1024px and below) */
+@media screen and (max-width: 1024px) {
+    .text-container2 {
+        padding: 8%;
+    }
+
+    .text-container2 h1 {
+        font-size: 2rem;
+    }
+
+    .text-container2 p {
+        font-size: 1rem;
+    }
+}
+
+/* Medium Devices (768px and below) */
+@media screen and (max-width: 768px) {
+    .meet-section {
+        display: flex;
+        flex-direction: column-reverse;
+        height: auto;
+    }
+
+    .image-container2 {
+        height: 75vh;
+    }
+
+    .image-container2 img {
+        height: 80vh;
+    }
+
+    .text-container2 {
+        padding: 5%;
+        text-align: center;
+    }
+
+    /* image adjust */
+    .image-container2 #meet{
+        display: block;
+    }
+    .image-container2 #meet2{
+        display: none;
+    }
+}
+
+/* Small Devices (480px and below) */
+@media screen and (max-width: 480px) {
+    .meet-section {
+        display: flex;
+        flex-direction: column-reverse;
+        height: auto;
+    }
+
+    .image-container2 {
+        height: 70vh;
+    }
+
+    .image-container2 img {
+        height: 80vh;
+    }
+
+    .text-container2 {
+        padding: 8%;
+        text-align: center;
+    }
+
+    .text-container2 h1 {
+        font-size: 1.8rem;
+    }
+
+    .text-container2 p {
+        font-size: 1rem;
+    }
+
+    /* image adjust */
+    .image-container2 #meet{
+        display: none;
+    }
+    .image-container2 #meet2{
+        display: block;
+    }
+}

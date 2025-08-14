@@ -1,0 +1,101 @@
+/* SECTION CONTAINER */
+.discover-work {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background: #e6e6e6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* TEXT OVERLAY */
+.text-overlay {
+    position: absolute;
+    z-index: 10;
+    text-align: center;
+    font-family: 'Hatton-Ultralight', serif;
+    font-weight: normal;
+    font-size: 8vw;
+    letter-spacing: 7px;
+    line-height: 1;
+    color: white;
+    pointer-events: none;
+}
+
+/* CENTERED IMAGE CONTAINER */
+.image-container {
+    position: absolute;
+    width: 60vw;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* IMAGE STYLING */
+.img {
+    position: absolute;
+    width: 50vw;
+    height: auto;
+}
+
+/* IMAGE POSITIONS */
+.img1 { top: 5%; left: 5%; }
+.img2 { top: 15%; left: 30%; }
+.img3 { top: 0%; right: 20%; }
+.img4 { bottom: 15%; left: 10%; }
+.img5 { bottom: 5%; right: 5%; }
+.img6 { bottom: 25%; right: 30%; }
+
+/* 🚀 INITIALLY HIDE IMAGES AND TEXT */
+.text-overlay p,
+.img {
+    opacity: 0;
+    transform: translateY(50px); /* Move up from below */
+}
+
+/* 🎬 TRIGGER ANIMATION WHEN VISIBLE */
+.discover-work.visible .text-overlay p,
+.discover-work.visible .img {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+/* DELAYED ANIMATION FOR IMAGES */
+.discover-work.visible .img1 { transition-delay: 0.2s; }
+.discover-work.visible .img2 { transition-delay: 0.4s; }
+.discover-work.visible .img3 { transition-delay: 0.6s; }
+.discover-work.visible .img4 { transition-delay: 0.8s; }
+.discover-work.visible .img5 { transition-delay: 1s; }
+.discover-work.visible .img6 { transition-delay: 1.2s; }
+
+/* 📱 RESPONSIVE ADJUSTMENTS */
+@media (max-width: 1024px) {
+    .text-overlay { font-size: 9vw; }
+    .image-container { width: 85vw; height: 60vh; }
+    .img { width: 40vw; }
+    .discover-work { height: 80vh; }
+}
+
+@media (max-width: 768px) {
+    .text-overlay { font-size: 10vw; letter-spacing: 5px; }
+    .image-container { width: 85vw; height: 45vh; }
+    .img { width: 40vw; }
+    .discover-work { height: 60vh; }
+}
+
+@media (max-width: 480px) {
+    .text-overlay { font-size: 12vw; letter-spacing: 3px; }
+    .image-container { width: 90vw; height: 40vh; }
+    .img { width: 60vw; }
+    
+    /* Adjusted positions for small screens */
+    .img1 { top: 2%; left: 2%; }
+    .img2 { top: 10%; left: 25%; }
+    .img3 { top: 0%; right: 10%; }
+    .img4 { bottom: 10%; left: 5%; }
+    .img5 { bottom: 2%; right: 2%; }
+    .img6 { bottom: 20%; right: 20%; }
+}

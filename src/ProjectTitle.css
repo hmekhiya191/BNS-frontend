@@ -1,0 +1,125 @@
+/* 🔥 Fullscreen Layout */
+.project-container {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+/* 📌 Left Side - Project Titles */
+.project-titles {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 60px;
+    background: #fff;
+    z-index: 10;
+    overflow: hidden;
+}
+
+/* ✨ Full-Height Scrollable Area */
+.scrollable {
+    height: 110vh;
+    overflow-y: auto;
+    overflow-x: hidden;  /* Removes horizontal scroll */
+    padding-right: 10px;
+}
+
+/* Hide scrollbar but allow scrolling */
+.scrollable::-webkit-scrollbar {
+    width: 5px;
+}
+.scrollable::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 10px;
+}
+.scrollable::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+/* 📌 Right Side - Background Image */
+.background {
+    width: 50%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bg-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease-in-out;
+}
+
+/* 🖋 Project Titles */
+.project-link {
+    display: flex;
+    align-items: center;
+    left: 2%;
+    gap: 15px;
+    text-decoration: none;
+    color: black;
+    font-size: 2.5rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    transition: transform 0.3s ease-in-out, color 0.4s ease-in-out;
+    margin-bottom: 20px;
+    position: relative; /* Prevents clipping */
+}
+
+
+/* ✨ Hover & Active Effects */
+.project-link:hover {
+    transform: scale(1.05);  /* Zoom text */
+}
+
+.project-link:hover h2, 
+.project-link.active h2 {
+    color: black;
+    background: linear-gradient(90deg, #ff7e5f, #5A8DF4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.project-link:hover .arrow, 
+.project-link.active .arrow {
+    display: inline;
+}
+
+.arrow {
+    font-size: 2rem;
+    color: #f4b400;
+    display: none;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* 📌 Background Hover Effect */
+.project-link:hover ~ .background .bg-image {
+    transform: scale(1.05);
+}
+
+/* 📱 Responsive Design */
+@media (max-width: 1024px) {
+    .project-titles {
+        width: 60%;
+        padding: 30px;
+        padding-top: 80px;
+    }
+    .project-link h2 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .project-container {
+        flex-direction: column;
+    }
+    .project-titles, .background {
+        width: 100%;
+    }
+}
+
+

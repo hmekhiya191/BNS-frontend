@@ -1,0 +1,502 @@
+/* Project.css */
+.project-page {
+  font-family: 'Poppins', sans-serif;
+  background: #fff;
+  color: #111;
+}
+
+.header-section {
+  width: 100%;
+  height: auto;
+}
+
+.header-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.title-section {
+  padding: 2rem;
+  text-align: center;
+  
+}
+
+.title-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.title-image {
+  max-width: 70%;
+  margin-top: 1rem;
+}
+
+.description {
+  font-size: 1rem;
+  margin-top: 1rem;
+  line-height: 1.6;
+}
+
+.secondary-section {
+  display: flex;
+  padding: 2rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.secondary-image-container.large {
+  flex: 1.8;
+}
+
+.secondary-image-container.small {
+  flex: 1.2;
+  
+}
+
+.secondary-image {
+  max-width: 90%;
+  height: auto;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+
+
+.details-section {
+  padding: 2rem;
+  font-size: 1rem;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.slogan-section {
+  min-height: 40vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  text-align: center;
+  background-color: #f7f7f7; /* or dark theme based on your site */
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+ font-family: 'Playfair Display', serif;
+}
+
+.slogan-section.reveal {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.slogan-text {
+  font-size: 2rem;
+  max-width: 900px;
+  color: #333;
+}
+
+
+
+
+.full-image {
+  width: 100vw;
+  height: auto;
+  display: block;
+}
+
+.next-project-title {
+  text-align: center;
+  margin: 2rem 0 1rem;
+  font-size: 1.8rem;
+  font-family: 'Playfair Display', serif;
+}
+
+.next-project-container {
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+  color: inherit;
+  margin-bottom: 2rem;
+}
+
+.next-project-card {
+  display: flex;
+  background: #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 90%;
+  max-width: 900px;
+  text-align: left;
+  transition: transform 0.3s;
+  font-family: 'Playfair Display', serif;
+}
+
+.next-project-card:hover {
+  transform: scale(1.02);
+}
+
+.next-project-image {
+  flex: 1;
+  background-size: cover;
+  background-position: center;
+  min-height: 200px;
+}
+
+.next-project-text {
+  flex: 1;
+  padding: 1.5rem;
+}
+
+
+
+.project-page {
+  color: #333;
+
+}
+
+/* Fade and Slide Animation (Initially Hidden) */
+.header-section,
+.title-section,
+.secondary-section,
+.details-section,
+.full-image-section,
+.next-project-section {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+/* When in View, Apply Reveal Animation */
+.reveal {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+/* Header Section */
+.header-section {
+  height: 75vh;
+  overflow: hidden;
+}
+
+.header-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Title Section */
+.title-section {
+  height: auto;
+  padding: 2rem;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  background-color: #fafafa;
+  font-family: 'Playfair Display', serif;
+}
+
+.title-content {
+  text-align: center;
+}
+
+.title {
+  font-size: 3.5rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.description {
+  font-size: 1.5rem;
+  margin-top: 2%;
+  margin-bottom: 1rem;
+  margin-bottom: 30px;
+}
+
+.title-image {
+  max-width: 45%;
+  height: auto;
+  margin-top: 10%;
+}
+
+/* Secondary Images Section */
+.secondary-section {
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding-left: 5%;
+}
+
+.secondary-image-container {
+  position: relative;
+}
+
+
+.secondary-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Details Section */
+.details-section {
+  height: 40vh;
+  padding: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f5f5f5;
+  font-size: 2.2rem;
+  line-height: 1.2;
+}
+
+.details-section p{
+  width: 70%;
+}
+
+/* Full Image Section */
+.full-image-section {
+  height: 85vh;
+  overflow: hidden;
+}
+
+.full-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Next Project Section */
+.next-project-section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  cursor: pointer;
+  background: #f0f0f0;
+}
+
+.next-project-section .next-circle {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50vw;
+  height: 25vw;
+  background-size: cover;
+  background-position: center;
+  border-top-left-radius: 50vw 25vw;
+  border-top-right-radius: 50vw 25vw;
+  transition: width 1s ease, height 1s ease, border-radius 1s ease, top 1s ease, transform 1s ease;
+  z-index: 1;
+}
+
+.secondary-image-container.large {
+  flex: 1.8;
+}
+
+.secondary-image-container.small {
+  flex: 1.2;
+  
+}
+.next-project-section .next-text {
+  position: absolute;
+  left: 50%;
+  top: 15%;
+  transform: translateX(-50%);
+  text-align: center;
+  z-index: 2;
+}
+
+.next-project-section .next-text h2 {
+  font-size: 4rem;
+  font-family: 'Playfair Display', serif;
+  color: #000;
+  margin-bottom: 0.5rem;
+  line-height: 1.1;
+  
+}
+
+.next-project-section .next-text p {
+  font-size: 1.5rem;
+  color: #444;
+  opacity: 0.9;
+}
+
+/* Expanding Animation */
+.next-project-section.expanding .next-circle {
+  width: 100vw;
+  height: 100vh;
+  border-radius: 0;
+  top: 0;
+  transform: translateX(0);
+}
+
+.next-project-section.expanding .next-text {
+  opacity: 0;
+}
+
+
+@media (max-width: 768px) {
+  .secondary-section {
+      flex-direction: column;
+      gap: 2rem;
+      height: auto;
+  }
+
+  .details-section {
+      padding: 2rem;
+      font-size: 1rem;
+  }
+
+  .next-project-text h2 {
+      font-size: 2rem;
+  }
+
+  .next-project-text p {
+      font-size: 1rem;
+  }
+}
+
+
+
+/* Initially Hidden */
+.header-section,
+.title-section,
+.secondary-section,
+.details-section,
+.full-image-section,
+.next-project-container {
+    opacity: 0;
+    transform: translateY(60px);
+    transition: opacity 1s ease-out, transform 1s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Reveal Animation */
+.reveal {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
+/* Staggered Animation Delays */
+.header-section.reveal { transition-delay: 0.2s; }
+.title-section.reveal { transition-delay: 0.4s; }
+.secondary-section.reveal { transition-delay: 0.6s; }
+.details-section.reveal { transition-delay: 0.8s; }
+.full-image-section.reveal { transition-delay: 1s; }
+.next-project-container.reveal { transition-delay: 1.2s; }
+
+
+
+
+
+/* Next Project Section */
+.next-project-container {
+  width: 100%;
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Next Project Card */
+.next-project-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 80%;
+  max-width: 900px;
+  height: 80%;
+  padding: 20px;
+  background: rgba(233, 233, 233, 0.85);
+  backdrop-filter: blur(8px);
+  border-radius: 15px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  text-decoration: none;
+}
+
+/* Hover Effect */
+.next-project-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Next Project Image */
+.next-project-image {
+  width: 50%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  border-radius: 12px;
+  transition: transform 0.4s ease;
+}
+
+/* Hover Effect for Image */
+.next-project-card:hover .next-project-image {
+  transform: scale(1.05);
+}
+
+/* Next Project Text */
+.next-project-text {
+  width: 45%;
+  padding: 20px;
+  color: #333;
+  text-align: left;
+}
+
+.next-project-text h2 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  /* font-family: "Playfair Display", serif; */
+  margin-bottom: 10px;
+}
+
+.next-project-text p {
+  font-size: 1.1rem;
+  color: #555;
+}
+
+/* Animation on Scroll (50% Threshold) */
+.next-project-container {
+  opacity: 0;
+  
+  transform: translateY(40px);
+  transition: opacity 0.8s ease-out, transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.next-project-container.reveal {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+
+/* Next Project Title */
+.next-project-title {
+  text-align: center;
+  font-size: 3rem;
+  
+  color: #333;
+
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* Reveal Animation */
+.next-project-title.reveal {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+

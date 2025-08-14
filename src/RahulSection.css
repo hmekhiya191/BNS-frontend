@@ -1,0 +1,151 @@
+/* Main Section */
+.rahul-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 100vh;
+    width: 100%;
+    background: #b3906d;
+    font-family: 'Hatton-Ultralight', serif;
+    overflow: hidden;
+}
+
+/* Initially Hidden */
+.text-container2 {
+    opacity: 0;
+    transform: translateY(50px);
+}
+
+.image-container2 {
+    opacity: 0;
+    transform: translateX(-20px);
+}
+
+/* Triggered Animation when section comes into view */
+.rahul-section.animate .text-container2 {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 1s ease-out, transform 2s ease-out;
+}
+
+h1{
+    margin-bottom: 30px;
+}
+.text-container2 p{
+    font-size: 1.3rem;
+    font-family:Bahnschrift Condensed;
+    font-weight: lighter;
+}
+
+
+
+/* Image Fade-In + Slide Effect */
+.rahul-section.animate .image-container2 {
+    opacity: 1;
+    transform: translateX(0);
+    transition: opacity 1.5s ease-out, transform 1.5s ease-out;
+}
+
+/* Text Delay */
+.rahul-section.animate .text-container2 h1 {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeSlideUp 1s ease-out forwards 0.7s;
+}
+
+.rahul-section.animate .text-container2 p {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeSlideUp 1s ease-out forwards 0.9s;
+}
+
+/* Animations */
+@keyframes fadeSlideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeSlideRight {
+    0% {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* 🔹 Media Queries */
+
+/* Tablets (1024px and below) */
+@media screen and (max-width: 1024px) {
+    .text-container2 {
+        padding: 8%;
+    }
+
+    .text-container2 h1 {
+        font-size: 2rem;
+    }
+
+    .text-container2 p {
+        font-size: 1rem;
+    }
+}
+
+/* Medium Devices (768px and below) */
+@media screen and (max-width: 768px) {
+    .rahul-section {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+    }
+
+    .image-container2 {
+        height: 70vh;
+    }
+
+    .image-container2 img {
+        height: 80vh;
+    }
+
+    .text-container2 {
+        padding: 5%;
+        text-align: center;
+    }
+}
+
+/* Small Devices (480px and below) */
+@media screen and (max-width: 480px) {
+    .rahul-section {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+    }
+
+    .image-container2 {
+        height: 70vh;
+    }
+
+    .image-container2 img {
+        height: 80vh;
+    }
+
+    .text-container2 {
+        padding: 8%;
+        text-align: center;
+    }
+
+    .text-container2 h1 {
+        font-size: 1.8rem;
+    }
+
+    .text-container2 p {
+        font-size: 1rem;
+    }
+}
