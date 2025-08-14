@@ -29,6 +29,12 @@ body {
   min-width: 320px;
   min-height: 100vh;
 }
+@font-face {
+  font-family: 'Hatton Ultralight';
+  src: url('/fonts/Hatton-Ultralight.otf') format('opentype');
+  font-weight: 200;
+  font-style: normal;
+}
 
 h1 {
   font-size: 3.2em;
