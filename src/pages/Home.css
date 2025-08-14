@@ -11,6 +11,8 @@ body, html {
     overflow-x: clip; /* Prevents horizontal scrolling without double scrollbar issue */
 }
 
+
+
 /* Text + Image Section */
 .text-image-section {
     height: 100vh;
