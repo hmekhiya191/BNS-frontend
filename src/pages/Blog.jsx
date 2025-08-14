@@ -81,7 +81,7 @@ const Blog = () => {
     >
       <img src="https://res.cloudinary.com/dhhrwylyd/image/upload/v1754833519/IMG_20250221_084341_yt39ds.jpg" className="bs-img img11" alt="img1" />
       <img src="https://res.cloudinary.com/dhhrwylyd/image/upload/v1754833465/IMG_20250221_084221_j4ccll.jpg" className="bs-img img22" alt="img2" />
-      <img src="https://res.cloudinary.com/dhhrwylyd/image/upload/v1754836177/MASTER_ROOM_Photo_-_3_v6tssl.jpg" className="bs-img img33" alt="img3" />
+      <img src="https://res.cloudinary.com/dhhrwylyd/image/upload/v1755013720/WhatsApp_Image_2025-08-12_at_21.17.43_9dc4bc7f_jwszwp.jpg" className="bs-img img33" alt="img3" />
       <img src="https://res.cloudinary.com/dhhrwylyd/image/upload/v1754835955/front_1_Photo_-_1_vui66w.jpg" className="bs-img img44" alt="img4" />
       <img src="https://res.cloudinary.com/dhhrwylyd/image/upload/v1754833543/IMG_20250221_084835_ijky2g.jpg" className="bs-img img55" alt="img5" />
     </motion.div>
