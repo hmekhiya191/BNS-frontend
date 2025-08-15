@@ -116,6 +116,7 @@
 @media (max-width: 768px) {
     .project-container {
         flex-direction: column;
+        height: 90vh;
     }
     .project-titles, .background {
         width: 100%;
