@@ -1,7 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Hatton:wght@100;300;500;700&display=swap');
-
-
-
+/* Remove Google Fonts import (Hatton not available there) */
+/* Keep only the local font face */
 @font-face {
   font-family: 'Hatton Ultralight';
   src: url('/fonts/Hatton-Ultralight.woff2') format('woff2'),
@@ -22,7 +20,7 @@
     background: none; 
     transition: transform 0.5s ease-in-out;
     z-index: 1000;
-    font-family: 'Hatton-Ultralight', serif;
+    font-family: 'Hatton Ultralight', serif; /* ✅ Fixed name */
 }
 
   .logo img {
@@ -46,6 +44,7 @@
     color: #000;
     font-size: 1.8rem;
     transition: color 0.3s ease-in-out;
+    font-family: 'Hatton Ultralight', serif; /* ✅ Fixed name */
 }
 
 /* ✅ White Text ONLY inside Hero Section */
