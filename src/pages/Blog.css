@@ -13,7 +13,7 @@
 }
 
 body {
-    font-family: 'Hatton-Ultralight', serif;
+     font-family: 'Hatton Ultralight', serif; /* ✅ Fixed name */
     background-color: #f9f9f9;
     color: #111;
     
