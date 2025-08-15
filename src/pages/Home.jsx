@@ -1,15 +1,11 @@
 import React, { useEffect, useState, useRef } from "react";
-import "./Home.css"; // Ensure this CSS file is properly linked
-import { Link } from "react-router-dom";
+import "./Home.css";
+import { Link, useNavigate } from "react-router-dom";
 import Footer from "../Footer";
 import Discover from "../Discover";
 import Projects from "../Projects-home";
-
-// Import Images
-
 import Hero from "../components/Hero";
 
-// StatsSection Component
 const StatsSection = () => {
   const statsRef = useRef(null);
   const [counts, setCounts] = useState([0, 0, 0]);
@@ -21,8 +17,6 @@ const StatsSection = () => {
     { target: 1, label: "Office" },
   ];
 
-  
-
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -30,11 +24,10 @@ const StatsSection = () => {
           setIsVisible(true);
         }
       },
-      { threshold: 0.6 } // Trigger when 60% of section is visible
+      { threshold: 0.6 }
     );
 
     if (statsRef.current) observer.observe(statsRef.current);
-
     return () => {
       if (statsRef.current) observer.unobserve(statsRef.current);
     };
@@ -42,7 +35,7 @@ const StatsSection = () => {
 
   useEffect(() => {
     if (isVisible) {
-      const speed = 100; // Adjust speed here
+      const speed = 100;
       const intervals = statsData.map((stat, index) =>
         setInterval(() => {
           setCounts((prevCounts) => {
@@ -57,7 +50,6 @@ const StatsSection = () => {
           });
         }, 40)
       );
-
       return () => intervals.forEach((interval) => clearInterval(interval));
     }
   }, [isVisible]);
@@ -77,34 +69,39 @@ const StatsSection = () => {
   );
 };
 
-// Home Component
 const Home = () => {
   const textSectionRef = useRef(null);
   const [textVisible, setTextVisible] = useState(false);
+  const [fadeClass, setFadeClass] = useState("page-fade-in");
+  const navigate = useNavigate();
 
-  // ✅ Scroll to top whenever the Home component is loaded
   useEffect(() => {
     window.scrollTo(0, 0);
-  }, []);
 
-  useEffect(() => {
+    // Text animation observer
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
           setTextVisible(true);
-          observer.disconnect(); // Stops observing after the first trigger
+          observer.disconnect();
         }
       },
       { threshold: 0.4 }
     );
 
     if (textSectionRef.current) observer.observe(textSectionRef.current);
-
     return () => observer.disconnect();
   }, []);
 
+  // Handle fade-out on navigation
+  const handleNavigation = (e, path) => {
+    e.preventDefault();
+    setFadeClass("page-fade-out");
+    setTimeout(() => navigate(path), 300); // Matches CSS transition
+  };
+
   return (
-    <>
+    <div className={fadeClass}>
       <Hero />
       <section className={`text-image-section ${textVisible ? "visible" : ""}`} ref={textSectionRef}>
         <p>
@@ -136,12 +133,11 @@ const Home = () => {
         </p>
       </section>
 
-      {/* Stats Section */}
       <StatsSection />
       <Projects />
       <Discover />
       <Footer />
-    </>
+    </div>
   );
 };
 
