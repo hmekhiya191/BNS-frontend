@@ -14,7 +14,7 @@ const StatsSection = () => {
   const statsData = [
     { target: 78, label: "Projects" },
     { target: 12, label: "Cities worked in" },
-    { target: 1, label: "Office" },
+    { target: 2, label: "Offices" },
   ];
 
   useEffect(() => {
