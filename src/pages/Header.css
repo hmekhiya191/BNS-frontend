@@ -167,7 +167,12 @@
         display: block;
         text-decoration: none;
         color: black;
-        font-size: 1.8rem;
+        font-size: 1.6rem;
         cursor: pointer;
     }
+      .logo img {
+    width: 50px;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+  }
 }
