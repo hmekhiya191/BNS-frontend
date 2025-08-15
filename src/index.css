@@ -28,12 +28,13 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
-  font-family: 'Hatton Ultralight', serif;
+  font-family: 'Hatton Ultralight', serif; /* ✅ Fixed name */
 }
 
 @font-face {
   font-family: 'Hatton Ultralight';
   src: url('/fonts/Hatton-Ultralight.woff2') format('woff2'),
+       url('/fonts/Hatton-Ultralight.woff') format('woff'),
        url('/fonts/Hatton-Ultralight.otf') format('opentype');
   font-weight: 200;
   font-style: normal;

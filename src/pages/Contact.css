@@ -13,13 +13,13 @@
 /* Title and Description */
 .contact-title {
     font-size: 3rem;
-    font-family: 'Hatton-Ultralight', serif;
+    font-family: 'Hatton Ultralight', serif; /* ✅ Fixed name */
     margin-bottom: 10px;
 }
 
 .contact-description {
     font-size: 1.2rem;
-    font-family: 'Hatton-Ultralight', serif;
+    font-family: 'Hatton Ultralight', serif; /* ✅ Fixed name */
     margin-bottom: 40px;
     width: 600px;
     max-width: 100%;

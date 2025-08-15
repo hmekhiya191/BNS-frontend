@@ -4,7 +4,7 @@
     grid-template-columns: 1fr 1fr; /* Left: Image, Right: Text */
     height: 100vh;
     background: #D9D0C4; /* Soft beige background */
-    font-family: 'Hatton-Ultralight', serif;
+    font-family: 'Hatton Ultralight', serif; /* ✅ Fixed name */
 }
 
 /* Initially Hidden */

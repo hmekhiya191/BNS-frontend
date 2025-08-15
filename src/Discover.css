@@ -14,7 +14,7 @@
     position: absolute;
     z-index: 10;
     text-align: center;
-    font-family: 'Hatton-Ultralight', serif;
+    font-family: 'Hatton Ultralight', serif; /* ✅ Fixed name */
     font-weight: normal;
     font-size: 8vw;
     letter-spacing: 7px;

@@ -27,7 +27,7 @@
 .left-content {
     width: 45%; /* Adjusted for better balance */
     text-align: left;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family:Bahnschrift Condensed;
     margin-left: 0; /* Removed negative margin */
 }
 
@@ -85,7 +85,7 @@
 .right-content {
     width: 50%;
     text-align: right;
-    font-family: 'Hatton-Ultralight', serif;
+    font-family: 'Hatton Ultralight', serif; /* ✅ Fixed name */
 }
 
 /* Right Content Heading */

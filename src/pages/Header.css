@@ -93,17 +93,16 @@
     background-color: white;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    justify-content: center; /* ✅ Vertically center */
+    align-items: center; /* ✅ Horizontally center */
     transition: right 0.5s ease-in-out; /* Slide-in effect */
     z-index: 999;
     overflow: hidden;
+    text-align: center; /* Ensures text alignment */
 }
 
-
-
 .mobile-menu.active {
-    right: 0; /* Move in from left */
+    right: 0; /* Move in from right */
 }
 
 .close-btn {
@@ -117,22 +116,26 @@
     cursor: pointer;
 }
 
+.mobile-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* ✅ Spacing between links */
+}
+
 .mobile-nav a {
     font-size: 3.5rem;
     text-decoration: none;
     font-weight: bold;
     color: #000;
-    margin: 15px 0;
-    display: block;
-    font-family: 'Hatton-Ultralight', serif;
+   font-family: 'Hatton Ultralight', serif; /* ✅ Fixed name */
 }
-
 
 .contact-info {
-    margin-top: 20px;
+    margin-top: 30px;
     text-align: center;
 }
-.contact-info p{
+
+.contact-info p {
     font-size: 1.2rem;
 }
 
@@ -140,6 +143,7 @@
     display: flex;
     gap: 15px;
     margin-top: 25px;
+    justify-content: center; /* ✅ Center social icons */
 }
 
 .social-links-header a {
@@ -148,13 +152,10 @@
     font-size: 1rem;
 }
 
-/* ✅ Dark Mode Header (when over dark background) */
+/* ✅ Dark Mode Header */
 .dark-mode {
     color: white;
 }
-
-
-
 
 /* Responsive Design for 768px */
 @media screen and (max-width: 768px) {
@@ -163,17 +164,10 @@
     }
 
     .menu-text {
-        display: block; /* Show menu */
-        
-        text-decoration: none;
-        color: #000;
-        transition: color 0.3s ease-in-out;
-    }
-
-    .menu-text {
-        cursor: pointer;
+        display: block;
         text-decoration: none;
         color: black;
         font-size: 1.8rem;
+        cursor: pointer;
     }
 }

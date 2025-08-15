@@ -6,7 +6,7 @@
     height: 70vh;
     background: #ffffff;
     position: sticky;
-    font-family: 'Hatton-Ultralight', serif;
+    font-family: 'Hatton Ultralight', serif; /* ✅ Fixed name */
 }
 
 .quote {

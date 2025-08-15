@@ -51,7 +51,7 @@ if (heroSection) {
       {/* Desktop Navigation */}
       <nav className="navbar">
         <Link to="/projects">Projects</Link>
-        <Link to="/blog">About us</Link>
+        <Link to="/blog">About</Link>
         <Link to="/contact">Contact</Link>
       </nav>
 
@@ -65,7 +65,7 @@ if (heroSection) {
         <button className="close-btn" onClick={() => setIsMobileMenuOpen(false)}>Close</button>
         <nav className="mobile-nav">
           <Link to="/projects" onClick={() => setIsMobileMenuOpen(false)}>Projects</Link>
-          <Link to="/blog" onClick={() => setIsMobileMenuOpen(false)}>About us</Link>
+          <Link to="/blog" onClick={() => setIsMobileMenuOpen(false)}>About</Link>
           {/* <Link to="#" onClick={() => setIsMobileMenuOpen(false)}>Journal</Link> */}
           <Link to="/contact" onClick={() => setIsMobileMenuOpen(false)}>Contact</Link>
         </nav>
