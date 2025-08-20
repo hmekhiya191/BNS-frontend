@@ -74,7 +74,7 @@ if (heroSection) {
           <p>bhatti.n.shahsassociates@gmail.com</p>
         </div>
         <div className="social-links-header">
-          <Link to="#">Twitter</Link>
+          <Link to="#">X</Link>
           <Link to="#">LinkedIn</Link>
           <Link to="https://www.instagram.com/bhatti.n.shahsassociates?igsh=MXd0NDloNHluMjRjcQ==">Instagram</Link>
           <Link to="#">Facebook</Link>
