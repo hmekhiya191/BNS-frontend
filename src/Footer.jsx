@@ -34,7 +34,7 @@ const Footer = () => {
             <img src="https://res.cloudinary.com/dhhrwylyd/image/upload/v1754833527/bns_logo-removebg-preview_cexv2u.png" alt="Logo" />
           </a>
           <a href="https://www.instagram.com/bhatti.n.shahsassociates?igsh=MXd0NDloNHluMjRjcQ==" className="social">Instagram</a>
-          <a href="#" className="social">Twitter</a>
+          <a href="#" className="social">X</a>
         </div>
       </div>
 
