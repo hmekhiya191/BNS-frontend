@@ -96,7 +96,7 @@
 }
 
 .slogan-text {
-  font-size: 2rem;
+  font-size: 1.8rem;
   max-width: 900px;
   color: #333;
 }
@@ -231,7 +231,10 @@
   justify-content: center;
   align-items: center;
   gap: 2rem;
-  padding-left: 5%;
+   display: flex;              /* ensure flexbox is applied */
+    align-items: center;        /* centers horizontally */
+    justify-content: center;    /* centers vertically */
+    text-align: center; 
 }
 
 .secondary-image-container {
@@ -347,10 +350,16 @@
 
 @media (max-width: 768px) {
   .secondary-section {
-      flex-direction: column;
-      gap: 2rem;
-      height: auto;
-  }
+    flex-direction: column;
+    gap: 2rem;
+    height: auto;
+
+    display: flex;              /* ensure flexbox is applied */
+    align-items: center;        /* centers horizontally */
+    justify-content: center;    /* centers vertically */
+    text-align: center;         /* optional, for text inside */
+}
+
 
   .details-section {
       padding: 2rem;
@@ -364,6 +373,11 @@
   .next-project-text p {
       font-size: 1rem;
   }
+  .slogan-text {
+  font-size: 1.5rem;
+  max-width: 900px;
+  color: #333;
+}
 }
 
 

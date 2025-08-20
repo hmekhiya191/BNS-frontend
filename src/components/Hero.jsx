@@ -44,7 +44,7 @@ const Hero = () => {
           playsInline
           preload="auto"
         >
-          <source src="" type="video/mp4" />
+          <source src="https://res.cloudinary.com/dhhrwylyd/video/upload/v1755010795/BNS_title_ai6hro.mp4" type="video/mp4" />
         </video>
       </div>
 
